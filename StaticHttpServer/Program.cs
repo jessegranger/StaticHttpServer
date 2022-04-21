@@ -11,8 +11,7 @@ namespace StaticHttpServer {
 		/// </summary>
 		[STAThread]
 		static void Main(string[] args) {
-			string path = args.Length > 0 ? args[0]
-				: @"C:\Users\jesse\Projects\little-war-game\";
+			string path = args[0];
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 			Application.Run(new Form1(path));
