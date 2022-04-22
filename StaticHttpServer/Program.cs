@@ -11,10 +11,13 @@ namespace StaticHttpServer {
 		/// </summary>
 		[STAThread]
 		static void Main(string[] args) {
-			string path = args[0];
+			if( args.Length == 0 ) {
+				MessageBox.Show("Requires a directory.", "Command-line Error");
+				return;
+			}
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Form1(path));
+			Application.Run(new Form1(args[0]));
 		}
 	}
 }
